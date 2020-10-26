@@ -1,0 +1,232 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+
+
+<!-- Home Page --> 
+<section> 
+  <% if (title == "Home") { %>
+    <main>
+        <div class="img-container">
+        <img src="./Assets/images/home.jpg" class="img-fluid" alt="Responsive image"></div>
+        <div class="centered"><h1 class="display-1" style="font-size: 120px; color: white;">WELCOME!</h1></div>
+
+    <div class="container"></div>
+      <div class="jumbotron bg-white text-dark">      
+        <h1 class="display-3">Hello there!</h1>
+        <h5>I would like to welcome you to my webpage. Where you can find out a little bit more about me, where I come from, my past professional experiences, my interests and to where I think I'm headed! If you have any further questions, please don't hesitate to get in touch, I'll be happy to assist you and your business needs.</h5>
+      </div>
+
+    <!--Division: Our services-->
+    
+    <div class="jumbotron bg-secondary text-white">  
+      <table style="width: 100%;">
+        <td><h1 class="display-3" style="text-align: center; padding-bottom: 40px;">Discover more</h1></td>
+      </table>
+      <table style="width: 100%; padding-bottom: 40px;">
+        <tr style="text-align: center;">
+          <td><a href="/about"><div id="circle"><img src="./Assets/images/about.png" alt="About" width="50%" style="margin-top: 25%;"></div></a></td>
+          <td><a href="/projects"><div id="circle"><img src="./Assets/images/projects.png" alt="Projects" width="50%" style="margin-top: 25%;"></div></a></td>
+          <td><a href="/services"><div id="circle"><img src="./Assets/images/services.png" alt="Services" width="50%" style="margin-top: 25%;"></div></a></td>
+          <td><a href="/contact"><div id="circle"><img src="./Assets/images/contact.png" alt="Contact" width="50%" style="margin-top: 25%;"></div></a></td>
+        </tr>
+        <tr style="text-align: center; font-family: 'Roboto', sans-serif;">
+          <td style="width: 25%; padding-top: 20px;">About Us</td>
+          <td style="width: 25%; padding-top: 20px;">Projects</td>
+          <td style="width: 25%; padding-top: 20px;">Services</td>
+          <td style="width: 25%; padding-top: 20px;">Contact</td>
+        </tr>
+      </table>
+    </div>
+<!--Division: Contact Us-->
+    <div class="jumbotron bg-white text-dark">      
+      <h1 class="display-3" style="text-align: center;">Contact Us</h1>
+      <h4 style="text-align: center;">Please, feel free to get in touch!</h4><br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm"><br><br>
+            <form action="index.html">
+              <div class="form-group">
+                <label for="nameLabel">Name</label>
+                <input type="text" class="form-control" id="nameLabel" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="shortMessage">Message</label>
+                <textarea class="form-control" id="shortMessage" rows="3" placeholder="Feel free to write us a message"></textarea>
+              </div>
+                <input type="submit" value="Submit" class="btn btn-info">
+              </form>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </main>
+  <% } else { %>
+  <% } %>
+</section>
+
+<!-- About Page --> 
+<section> 
+  <% if (title == "About") { %>
+    <main>
+    <img src="./Assets/images/index_raphael.jpg" class="img-fluid" alt="Responsive image">
+    <div class="container"></div>
+      <div class="jumbotron">      
+        <h1 class="display-3">Hello! I'm Raphael</h1><br>
+        <p>I was born and raised in an industrial city called Monterrey, in the northern part of Mexico. I have a bachelor's degree in Marketing and Advertisement from TecMilenio University. I graduated in 2014 and I had 6 years of experience working as a buyer for FEMSA, one of the biggest companies in Mexico that owns OXXO, a chain of convenience stores with more than 18,000 locations accross Mexico, Colombia, Chile, Peru and the United States.</p>
+        <p>Then, I decided to change the course of my professional carreer and since January 2020, I arrived to Canada and now I'm sturying Software Engineering Technician at Centennial College. My goal is to work for a big company and to become a front-end developer</p><br>
+      </div>
+    </div>
+  </main>
+  <% } else { %>
+  <% } %>
+</section>
+
+<!-- Projects Page --> 
+<section> 
+  <% if (title == "Projects") { %>
+    <main>
+      <div class="container"></div>
+        <div class="jumbotron" id="initialParagraph">      
+          <h1 class="display-3">My projects</h1>
+          <p>As you can notice through my introduction, I'm pretty new when it comes to Software Engineering, so I don't have a lot of projects to brag about, but here are some of my favorie thing I've done so far, either from my previous job, my past school assignments or for personal purposes.</p>
+        </div>
+      </div>
+
+      <table class="table table-borderless" style="width: 80%; margin-left: auto; margin-right: auto;" id="projectsTable">
+
+        <tr>
+          <td style="width: 35%;"><a href="https://en.wikipedia.org/wiki/OXXO" target="_blank"><img src="./Assets/images/oxxo.jpg" alt="Project1" width="320px"></a></td>
+          <td>
+            <h5>OXXO</h5>
+             In my previous job I was a buyer an negotiatior and I was in charge of the salty snacks category, which includes chips, nuts, popcorn and seeds. One of my most important projects was increasing the sales volume, and through the incorporation of regional suppliers, I was able to grow sales for more than 4% (which is a huge amount for a category as solid as salty snacks). Sorry I can't provide more information, I'm not supposed to show the data due confidenciality matters, but I promise it was harder than it sounds, but it was lots of fun! You can learn more about OXXO by clicking in the picture.</td>
+        </tr>
+      
+        <tr>
+          <td style="width: 35%;"><a href="http://studentweb.cencol.ca/rpuenter/finalproject///index.html" target="_blank"><img src="./Assets/images/web.jpg" alt="Project2" width="320px"></a></td>
+          <td>
+            <h5>Web development</h5>
+            When I first started to study this new carreer, I was unsure if I should become a web developer or what would be more suitable for me. As I progressed through the carreer, it's been clear to me that my marketing and design knowledge, could work okay if I become a web developer. I still have a really big road ahead of me, I have so much to learn, but I hold really dear the project I did for my web design class last semester. It feels like it's the seed of something big I expect to harvest soon. You can see my assignment by clicking in the picture in the left.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 35%;"><a href="http://beityala.com/" target="_blank"><img src="./Assets/images/beityala.jpg" alt="Project3" width="320px"></a></td>
+          <td>
+            <h5>Style corrector</h5>
+            My third project is divided into two phases: First I need to say I am very fond to grammar and spelling, and I am actually really good at it (in Spanish, which is my native language, of course... I'm sorry if I have too many mistakes in English, I'm doing my best!) I took several courses to become a style corrector. And second, even though I never studied it, I also know a little bit about design. I know how to use Photoshop, Illustrator, and mostly, InDesign (I used Illustrator to create my logo, hope you liked it!). So I am proud of working as a free-lance style corrector and designer for several mexican companies that produce books. Libreria Beityala is one of my customers, you can visit their page through the link in the pic.</td>
+      </tr>
+    </table><br><br><br>
+
+    </main>
+  <% } else { %>
+  <% } %>
+</section>
+
+<!-- Services Page --> 
+<section> 
+  <% if (title == "Services") { %>
+    <main>
+      <img src="./Assets/images/services.jpg" class="img-fluid" alt="Responsive image">
+    <div class="container"></div>
+      <div class="jumbotron">      
+        <h1 class="display-3" style="text-align: center;">My services</h1>
+        <p style="text-align: center;">These are some of the services that I can provide you.</p>
+<br><br>
+        <table class="table table-borderless" style="width: 80%; margin-left: auto; margin-right: auto;" id="projectsTable">
+
+          <tr>
+            <td><div id="circle"><img src="./Assets/images/fullstack.png" alt="About" width="50%" style="margin-top: 25%;"></div></a></td>
+            <td><div id="circle"><img src="./Assets/images/frontend.png" alt="Projects" width="50%" style="margin-top: 25%;"></div></a></td>
+            <td><div id="circle"><img src="./Assets/images/backend.png" alt="Services" width="50%" style="margin-top: 25%;"></div></a></td>
+          </tr>
+          <tr>
+            <td>
+              <h5>Full-Stack Developer</h5>
+              Build smooth and secured applications with modernized software development architecture.
+              <br>– Microsoft.Net, LAMP, MEAN
+            </td>
+            <td>
+              <h5>Front-end Developer</h5>
+              Develop interactive and stunning web experience for end users.
+              <br>– Angular, ReactJs, VueJs, jQuery, JavaScript, HTML, CSS
+            </td>
+            <td>
+              <h5>Back-end Developer</h5>
+              Customized and flawless backend solutions for smooth processes and optimized outcome.
+              <br>– .Net, PHP, NodeJs
+            </td>
+          </tr>
+          <tr>
+            <td><div id="circle"><img src="./Assets/images/database.png" alt="About" width="50%" style="margin-top: 25%;"></div></a></td>
+            <td><div id="circle"><img src="./Assets/images/mobile.png" alt="Projects" width="50%" style="margin-top: 25%;"></div></a></td>
+            <td><div id="circle"><img src="./Assets/images/quality.png" alt="Services" width="50%" style="margin-top: 25%;"></div></a></td>
+          </tr>
+          <tr>
+            <td>
+              <h5>Database Developer</h5>
+              Enhance your organization’s databases and monitor it while ensuring high levels of data availability.
+              <br>– SQL Server, MySQL, PostGreSQL
+            </td>
+            <td>
+              <h5>Mobile Developer</h5>
+              Develop innovative and highest-quality mobile apps surging impeccable user-experience.
+              <br>– iOS, Android, Flutter, React Native, Xamarin
+            </td>
+            <td>
+              <h5>Quality Assurance</h5>
+              Ensure flawless performance and high efficiencies of the software with numerous testing methods.
+              <br>– Manual Testing, Automated (Selenium) Testing
+            </td>
+          </tr>
+            
+      </table>
+      </div>
+    </div>
+  </main>
+  <% } else { %>
+  <% } %>
+</section>
+
+<!-- Contact Us Page --> 
+<section> 
+  <% if (title == "Contact Us") { %>
+    <img src="./Assets/images/contactus.jpg" class="img-fluid" alt="Responsive image">
+    <main>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <br>
+            <h1 class="display-3" style="padding-top: 20px;">Please, contact me</h1>
+            <br>
+
+            <form action="index.html">
+              <div class="form-group">
+                <label for="nameLabel">Name</label>
+                <input type="text" class="form-control" id="nameLabel" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+              <div class="form-group">
+                <label for="shortMessage">Message</label>
+                <textarea class="form-control" id="shortMessage" rows="3" placeholder="Feel free to write us a message"></textarea>
+              </div>
+              <input type="submit" value="Submit" class="btn btn-info"><br><br><br><br><br><br><br>
+            </form>
+          </div>
+        </div>
+      </div>      
+    </main> 
+  <% } else { %>
+  <% } %>
+</section>
+
+  <%- include partials/bottom_nav.ejs %>
+  <%- include partials/footer.ejs %>

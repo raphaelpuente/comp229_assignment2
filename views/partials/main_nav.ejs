@@ -1,0 +1,63 @@
+<!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <a class="navbar-brand" href="/home">
+      <img src="./Assets/images/logo.png" width="25" height="30" alt="logo" loading="lazy"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        
+        <% if (title == "Home") { %>
+        <li class="nav-item active">
+        <% } else { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/home"><i class="fas fa-home"></i> Home</a>
+        </li>
+
+        <% if (title == "About") { %>
+        <li class="nav-item active">
+        <% } else { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/about"><i class="fas fa-heart"></i></i> About</a>
+        </li>
+
+        <% if (title == "Projects") { %>
+        <li class="nav-item active">
+        <% } else { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/projects"><i class="fas fa-briefcase"></i> Projects</a>
+        </li>
+
+        <% if (title == "Services") { %>
+        <li class="nav-item active">
+        <% } else { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/services"><i class="fas fa-bullseye"></i> Services</a>
+        </li>
+
+        <% if (title == "Contact Us") { %>
+        <li class="nav-item active">
+        <% } else { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/contact"><i class="fas fa-envelope"></i> Contact Us</a>
+        </li>
+
+        <% if (title == "Login") { %>
+        <li class="nav-item active">
+        <% } else { %>
+        <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/login"><i class="fas fa-sign-in-alt"></i></i> Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

@@ -1,0 +1,48 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+
+
+<!-- Home Page --> 
+<section> 
+  <% if (title == "Login") { %>
+    <main>
+        <body style="background-color:#FFD85C;"><br><br><br>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h1 class="display-2">Hello!</h1>
+                        <br>
+                        <h1 class="display-4">Please sign in <br> to enjoy all of <br> our benefits!</h1>
+                    </div>                   
+                    <div class="col-sm">
+                        <div class="jumbotron bg-white text-dark">   
+                            <form action="index.html">
+                                <div class="form-group">
+                                  <label for="nameLabel">Name</label>
+                                  <input type="text" class="form-control" id="nameLabel" placeholder="Name">
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleFormControlInput1">Email address</label>
+                                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                </div>
+                                <div class="form-group">
+                                  <label for="shortMessage">Message</label>
+                                  <textarea class="form-control" id="shortMessage" rows="3" placeholder="Feel free to write us a message"></textarea>
+                                </div>
+                                <input type="submit" value="Submit" class="btn btn-info"><br><br>
+                              </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </main>
+  <% } else { %>
+  <% } %>
+</section>
+
+
+
+  <%- include partials/bottom_nav.ejs %>
+  <%- include partials/footer.ejs %>
