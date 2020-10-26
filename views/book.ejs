@@ -1,0 +1,40 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+
+
+<!-- Home Page --> 
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            <h1><%= title %></h1>
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row -->
+                <tr class="d-flex">
+                    <th class="text-center col-2">First Name</th>
+                    <th class="text-center col-2">Last Name</th>
+                    <th class="text-center col-2">Phone Number</th>
+                    <th class="text-center col-2">E-Mail</th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < BookList.length; count++) { %>
+                    <tr>
+                        <td class="text-center col-2"><%= BookList[count].first %></td>
+                        <td class="text-center col-2"><%= BookList[count].last %></td>
+                        <td class="text-center col-2"><%= BookList[count].number %></td>
+                        <td class="text-center col-2"><%= BookList[count].email %></td>
+                    </tr>
+                <% } %> 
+            </table>
+        </div>
+    </div>
+</main>
+
+
+
+
+<%- include partials/bottom_nav.ejs %>
+<%- include partials/footer.ejs %>
