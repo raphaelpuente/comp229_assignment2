@@ -1,0 +1,72 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+
+<!-- Services Page --> 
+<section> 
+  <% if (title == "Services") { %>
+    <main>
+      <img src="./Assets/images/services.jpg" class="img-fluid" alt="Responsive image">
+    <div class="container"></div>
+      <div class="jumbotron">      
+        <h1 class="display-3" style="text-align: center;">My services</h1>
+        <p style="text-align: center;">These are some of the services that I can provide you.</p>
+<br><br>
+        <table class="table table-borderless" style="width: 80%; margin-left: auto; margin-right: auto;" id="projectsTable">
+
+          <tr>
+            <td><div id="circle"><img src="./Assets/images/fullstack.png" alt="About" width="50%" style="margin-top: 25%;"></div></a></td>
+            <td><div id="circle"><img src="./Assets/images/frontend.png" alt="Projects" width="50%" style="margin-top: 25%;"></div></a></td>
+            <td><div id="circle"><img src="./Assets/images/backend.png" alt="Services" width="50%" style="margin-top: 25%;"></div></a></td>
+          </tr>
+          <tr>
+            <td>
+              <h5>Full-Stack Developer</h5>
+              Build smooth and secured applications with modernized software development architecture.
+              <br>– Microsoft.Net, LAMP, MEAN
+            </td>
+            <td>
+              <h5>Front-end Developer</h5>
+              Develop interactive and stunning web experience for end users.
+              <br>– Angular, ReactJs, VueJs, jQuery, JavaScript, HTML, CSS
+            </td>
+            <td>
+              <h5>Back-end Developer</h5>
+              Customized and flawless backend solutions for smooth processes and optimized outcome.
+              <br>– .Net, PHP, NodeJs
+            </td>
+          </tr>
+          <tr>
+            <td><div id="circle"><img src="./Assets/images/database.png" alt="About" width="50%" style="margin-top: 25%;"></div></a></td>
+            <td><div id="circle"><img src="./Assets/images/mobile.png" alt="Projects" width="50%" style="margin-top: 25%;"></div></a></td>
+            <td><div id="circle"><img src="./Assets/images/quality.png" alt="Services" width="50%" style="margin-top: 25%;"></div></a></td>
+          </tr>
+          <tr>
+            <td>
+              <h5>Database Developer</h5>
+              Enhance your organization’s databases and monitor it while ensuring high levels of data availability.
+              <br>– SQL Server, MySQL, PostGreSQL
+            </td>
+            <td>
+              <h5>Mobile Developer</h5>
+              Develop innovative and highest-quality mobile apps surging impeccable user-experience.
+              <br>– iOS, Android, Flutter, React Native, Xamarin
+            </td>
+            <td>
+              <h5>Quality Assurance</h5>
+              Ensure flawless performance and high efficiencies of the software with numerous testing methods.
+              <br>– Manual Testing, Automated (Selenium) Testing
+            </td>
+          </tr>
+            
+      </table>
+      </div>
+    </div>
+  </main>
+  <% } else { %>
+  <% } %>
+</section>
+
+
+  <%- include partials/bottom_nav.ejs %>
+  <%- include partials/footer.ejs %>

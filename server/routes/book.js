@@ -1,112 +1,28 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 let mongoose = require('mongoose');
 
 //Connect to our Book Model
 let Book = require('../models/book')
+let bookController = require('../controllers/book');
+const book = require('../models/book');
 
 /* GET users listing. */
-router.get('/', (req, res, next) => {
-  Book.find((err, bookList)=>{
-    if(err)
-    {
-      return console.error(err);
-    }
-    else
-    {
-        res.render('book/list', {title: 'Contact List', BookList: bookList});
-    }
-  });
-});
+router.get('/', bookController.displayBookList);
 
 /* GET ROUTE for displaying ADD page - CREATE OPERATION */
-router.get('/add', (req, res, next) => {
-  res.render('book/add', {title: 'Add'});
-
-});
+router.get('/add', bookController.displayAddPage);
 
 /* GET ROUTE for processing ADD page - CREATE OPERATION */
-router.post('/add', (req, res, next) => {
-  let newBook = Book({
-    "first": req.body.first,
-    "last": req.body.last,
-    "number": req.body.number,
-    "email": req.body.email
-  });
-
-  Book.create(newBook, (err, Book) =>{
-    if(err)
-    {
-      console.log(err);
-      res.end(err);
-    }
-    else
-    {
-      res.redirect('/contact-list')
-    }
-  });
-
-});
+router.post('/add', bookController.processAddPage);
 
 /* GET ROUTE for displaying EDIT page - UPDATE OPERATION */
-router.route('/edit/:id', (req, res, next) => {
-  let id = req.params.id;
-
-  Book.findById(id, (err, bookToEdit) =>{
-    if(err)
-    {
-      console.log(err);
-      res.end(err);
-    }
-    else
-    {
-      res.render('book/edit', {title: 'Edit', book: bookToEdit})
-    }
-  });
-
-});
+router.get('/edit/:id', bookController.displayEditPage); 
 
 /* GET ROUTE for processing EDIT page - UPDATE OPERATION */
-router.post('/edit/:id', (req, res, next) => {
-  let id = req.params.id
-  let updatedBook = Book({
-    "_id": id,
-    "first": req.body.first,
-    "last": req.body.last,
-    "number": req.body.number,
-    "email": req.body.email
-  });
-
-  Book.updateOne({_id: id}, updatedBook, (err) => {
-    if(err)
-    {
-      console.log(err);
-      res.end(err);
-    }
-    else
-    {
-      res.redirect('/contact-list')
-    }
-  })
-
-});
+router.post('/edit/:id', bookController.processEditPage);
 
 /* GET ROUTE for performing DELETE page - DELETE OPERATION */
-router.get('/delete/:id', (req, res, next) => {
-  let id = req.params.id;
-
-  Book.remove({_id: id}, (err) => {
-    if(err)
-    {
-      console.log(err);
-      res.end(err);
-    }
-    else
-    {
-      res.redirect('/contact-list')
-    }
-  })
-
-});
+router.get('/delete/:id', bookController.performDelete);
 
 module.exports = router;

@@ -1,0 +1,48 @@
+<%- include partials/header.ejs %>
+<%- include partials/main_nav.ejs %>
+
+
+
+<!-- Projects Page --> 
+<section> 
+  <% if (title == "Projects") { %>
+    <main>
+      <div class="container"></div>
+        <div class="jumbotron" id="initialParagraph">      
+          <h1 class="display-3">My projects</h1>
+          <p>As you can notice through my introduction, I'm pretty new when it comes to Software Engineering, so I don't have a lot of projects to brag about, but here are some of my favorie thing I've done so far, either from my previous job, my past school assignments or for personal purposes.</p>
+        </div>
+      </div>
+
+      <table class="table table-borderless" style="width: 80%; margin-left: auto; margin-right: auto;" id="projectsTable">
+
+        <tr>
+          <td style="width: 35%;"><a href="https://en.wikipedia.org/wiki/OXXO" target="_blank"><img src="./Assets/images/oxxo.jpg" alt="Project1" width="320px"></a></td>
+          <td>
+            <h5>OXXO</h5>
+             In my previous job I was a buyer an negotiatior and I was in charge of the salty snacks category, which includes chips, nuts, popcorn and seeds. One of my most important projects was increasing the sales volume, and through the incorporation of regional suppliers, I was able to grow sales for more than 4% (which is a huge amount for a category as solid as salty snacks). Sorry I can't provide more information, I'm not supposed to show the data due confidenciality matters, but I promise it was harder than it sounds, but it was lots of fun! You can learn more about OXXO by clicking in the picture.</td>
+        </tr>
+      
+        <tr>
+          <td style="width: 35%;"><a href="http://studentweb.cencol.ca/rpuenter/finalproject///index.html" target="_blank"><img src="./Assets/images/web.jpg" alt="Project2" width="320px"></a></td>
+          <td>
+            <h5>Web development</h5>
+            When I first started to study this new carreer, I was unsure if I should become a web developer or what would be more suitable for me. As I progressed through the carreer, it's been clear to me that my marketing and design knowledge, could work okay if I become a web developer. I still have a really big road ahead of me, I have so much to learn, but I hold really dear the project I did for my web design class last semester. It feels like it's the seed of something big I expect to harvest soon. You can see my assignment by clicking in the picture in the left.</td>
+        </tr>
+
+        <tr>
+          <td style="width: 35%;"><a href="http://beityala.com/" target="_blank"><img src="./Assets/images/beityala.jpg" alt="Project3" width="320px"></a></td>
+          <td>
+            <h5>Style corrector</h5>
+            My third project is divided into two phases: First I need to say I am very fond to grammar and spelling, and I am actually really good at it (in Spanish, which is my native language, of course... I'm sorry if I have too many mistakes in English, I'm doing my best!) I took several courses to become a style corrector. And second, even though I never studied it, I also know a little bit about design. I know how to use Photoshop, Illustrator, and mostly, InDesign (I used Illustrator to create my logo, hope you liked it!). So I am proud of working as a free-lance style corrector and designer for several mexican companies that produce books. Libreria Beityala is one of my customers, you can visit their page through the link in the pic.</td>
+      </tr>
+    </table><br><br><br>
+
+    </main>
+  <% } else { %>
+  <% } %>
+</section>
+
+
+  <%- include partials/bottom_nav.ejs %>
+  <%- include partials/footer.ejs %>
