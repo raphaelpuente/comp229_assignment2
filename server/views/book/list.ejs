@@ -1,34 +1,47 @@
-<%- include partials/header.ejs %>
-<%- include partials/main_nav.ejs %>
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
 
 
 
 <!-- Home Page --> 
+<img src="./Assets/images/contact-list-banner.jpg" class="img-fluid" alt="Responsive image"><br><br>
+
 <main class="container">
     <div class="row">
         <div class="offset-md-1 col-md-10">
-            <h1><%= title %></h1>
-            <br>
+            <h1 class="display-3" style="text-align: center;">Contact List</h1><br>
+            <a href="/book-list/add" class="btn btn-primary" role="button">
+            <i class="fas fa-plus-circle"></i>Add a contact</a><br><br>
+            
             <table class="table table-bordered table-striped table-hover">
-                <!-- Header Row -->
-                <tr class="d-flex">
-                    <th class="text-center col-2">First Name</th>
-                    <th class="text-center col-2">Last Name</th>
-                    <th class="text-center col-2">Phone Number</th>
-                    <th class="text-center col-2">E-Mail</th>
-                </tr>
+            <!-- Header Row -->
+            <tr>
+                <th class="text-center">First Name</th>
+                <th class="text-center">Last Name</th>
+                <th class="text-center">Phone Number</th>
+                <th class="text-center">E-Mail</th>
+                <th class="text-center"></th>
+                <th class="text-center"></th>
+            </tr>
 
-                <!-- Repeatable Template Row -->
-
-                <% for(let count = 0; count < BookList.length; count++) { %>
-                    <tr>
-                        <td class="text-center col-2"><%= BookList[count].first %></td>
-                        <td class="text-center col-2"><%= BookList[count].last %></td>
-                        <td class="text-center col-2"><%= BookList[count].number %></td>
-                        <td class="text-center col-2"><%= BookList[count].email %></td>
-                    </tr>
-                <% } %> 
-            </table>
+            <!-- Repeatable Template Row -->
+            <% for(let count = 0; count < BookList.length; count++) { %>
+            <tr>
+                <td class="text-center"><%= BookList[count].first %></td>
+                <td class="text-center"><%= BookList[count].last %></td>
+                <td class="text-center"><%= BookList[count].number %></td>
+                <td class="text-center"><%= BookList[count].email %></td>
+                <td class="text-center">
+                    <a href="/book-list/edit/<%= BookList[count]._id %>" class="btn btn-primary btn-sm">
+                    <i class="fas fa-pencil-alt"></i> Edit</a>
+                </td>
+                <td class="text-center">
+                    <a href="/book-list/delete/<%= BookList[count]._id %>" class="btn btn-danger btn-sm">
+                    <i class="fas fa-trash-alt"></i> Delete</a>
+                </td>
+            </tr>
+            <% } %> 
+            </table><br><br><br><br>
         </div>
     </div>
 </main>
@@ -36,5 +49,5 @@
 
 
 
-<%- include partials/bottom_nav.ejs %>
-<%- include partials/footer.ejs %>
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
