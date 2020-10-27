@@ -24,9 +24,20 @@ router.get('/services', indexController.displayServicesPage);
 /* GET Contact page. */
 router.get('/contact', indexController.displayContactPage);
 
-
-/* GET Login page. */
+/* GET DISPLAY Log in page. */
 router.get('/login', indexController.displayLoginPage);
+
+/* GET PROCESS Log in page. */
+router.get('/login', indexController.processLoginPage);
+
+/* GET DISPLAY Register page. */
+router.get('/register', indexController.displayRegisterPage);
+
+/* GET PROCESS Register page. */
+router.get('/register', indexController.processRegisterPage);
+
+/* GET PERFORM Log out page. */
+router.get('/logout', indexController.performLogout);
 
 
 
