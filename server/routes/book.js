@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
     }
     else
     {
-        res.render('book/list', {title: 'Book List', BookList: bookList});
+        res.render('book/list', {title: 'Contact List', BookList: bookList});
     }
   });
 });
@@ -42,7 +42,7 @@ router.post('/add', (req, res, next) => {
     }
     else
     {
-      res.redirect('/book-list')
+      res.redirect('/contact-list')
     }
   });
 
@@ -60,7 +60,7 @@ router.route('/edit/:id', (req, res, next) => {
     }
     else
     {
-      res.render('book/edit', {title: 'Edit Book', book: bookToEdit});
+      res.render('book/edit', {title: 'Edit', book: bookToEdit})
     }
   });
 
@@ -85,7 +85,7 @@ router.post('/edit/:id', (req, res, next) => {
     }
     else
     {
-      res.redirect('/book-list')
+      res.redirect('/contact-list')
     }
   })
 
@@ -103,7 +103,7 @@ router.get('/delete/:id', (req, res, next) => {
     }
     else
     {
-      res.redirect('/book-list')
+      res.redirect('/contact-list')
     }
   })
 
