@@ -59,13 +59,14 @@
           <a class="nav-link" href="/contact-list"><i class="fas fa-list-alt"></i> List</a>
         </li>
 
-        <% if (title == "Login") { %>
-        <li class="nav-item active">
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">
+            <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
         <% } else { %>
-        <li class="nav-item">
+          <li class="nav-item"><a href="/login" class="nav-link">
+            <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
         <% } %>
-          <a class="nav-link" href="/auth/login"><i class="fas fa-sign-in-alt"></i></i> Login</a>
-        </li>
       </ul>
     </div>
   </nav>

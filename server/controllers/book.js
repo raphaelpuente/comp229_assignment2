@@ -12,13 +12,17 @@ module.exports.displayBookList = (req, res, next) => {
       }
       else
       {
-          res.render('book/list', {title: 'Contact List', BookList: bookList});
+          res.render('book/list', 
+          {title: 'Contact List', 
+          BookList: bookList, 
+          displayName: req.user ? req.user.displayName : ''});
       }
     });
 };
 
 module.exports.displayAddPage = (req, res, next) => {
-    res.render('book/add', {title: 'Add'});
+    res.render('book/add', {title: 'Add', 
+    displayName: req.user ? req.user.displayName : ''});
 };
 
 module.exports.processAddPage = (req, res, next) => {
@@ -53,7 +57,8 @@ module.exports.displayEditPage = (req, res, next) => {
       }
       else
       {
-        res.render('book/edit', {title: 'Edit', book: bookToEdit})
+        res.render('book/edit', {title: 'Edit', book: bookToEdit, 
+        displayName: req.user ? req.user.displayName : ''})
       }
     });
 };

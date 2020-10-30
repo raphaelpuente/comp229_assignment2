@@ -4,8 +4,8 @@ let mongoose = require('mongoose');
 
 let passport = require('passport');
 let bookController = require('../controllers/book');
-const book = require('../models/book');
 
+//helper function for guarding
 function requireAuth(req, res, next)
 {
     if(!req.isAuthenticated())
@@ -16,7 +16,7 @@ function requireAuth(req, res, next)
 }
 
 /* GET users listing. */
-router.get('/', requireAuth, bookController.displayBookList);
+router.get('/', bookController.displayBookList);
 
 /* GET ROUTE for displaying ADD page - CREATE OPERATION */
 router.get('/add', requireAuth, bookController.displayAddPage);
